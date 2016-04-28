@@ -11,8 +11,7 @@ switch ($action) {
         $renderer->render('index');
         break;
     case 'ajax':
-        $validator = new \App\validators\DetectAmount();
-        print_r($validator->detect('1x'));
+        $renderer->render('ajax');
         break;
     case 'error':
     default:

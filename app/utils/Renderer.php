@@ -5,17 +5,26 @@ class Renderer {
     public static function render($page) {
         $header = new \App\views\partials\Header();
         $footer = new \App\views\partials\Footer();
-        $header->render();
+        $content = '';
         switch ($page) {
             case 'index':
                 $index = new \App\views\Index();
-                $index->render();
+                $content .= $header->render();
+                $content .= $index->render();
+                $content .= $footer->render();
+                break;
+            case 'ajax':
+                $ajax = new \App\views\Ajax();
+                $content .= $ajax->render();
                 break;
             case 'error':
             default:
                 $error = new \App\views\Error();
-                $error->render();
+                $content .= $header->render();
+                $content .= $error->render();
+                $content .= $footer->render();
         }
-        $footer->render();
+
+        echo $content;
     }
 }

@@ -1,4 +1,8 @@
-<?php namespace App\validators;
+<?php
+/*
+ * Actual splitting into coins going on here with validated amount
+ */
+namespace App\validators;
 
 class SplitAmount {
     //  £2, £1, 50p, 20p, 2p and 1p coins

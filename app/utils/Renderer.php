@@ -1,4 +1,7 @@
 <?php
+/*
+ * This Class render content
+ */
 namespace App\utils;
 
 class Renderer {

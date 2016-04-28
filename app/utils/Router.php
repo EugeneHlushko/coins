@@ -1,4 +1,8 @@
 <?php
+/*
+ * This Class will do basic route detection, we have only three routes for now, index, ajax and all others considered
+ * as error.
+ */
 namespace App\utils;
 
 class Router {

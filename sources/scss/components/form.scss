@@ -1,0 +1,77 @@
+%form-radius {
+  border-radius: 3px;
+}
+
+.form {
+  width: 90%;
+  margin: auto;
+  padding-top: 5%;
+
+  &-row {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 0;
+
+    label,
+    input {
+      box-sizing: border-box;
+      display: inline-block;
+      height: 32px;
+      line-height: 32px;
+    }
+
+    label {
+      padding-right: 4%;
+      font-size: 14px;
+      width: 40%;
+      text-align: right;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    input[type='text'] {
+      width: 60%;
+      -webkit-appearance: initial;
+      border: 1px solid $black;
+      padding: 0 2%;
+      font-size: 13px;
+      @extend %form-radius;
+      transition: border-color 200ms ease-in;
+      outline: none;
+
+      &:focus {
+        border-color: $green_dark;
+      }
+    }
+
+    &.error {
+      font-size: inherit;
+      color: $red;
+    }
+  }
+
+  &-button {
+    width: 100%;
+    background-color: $green;
+    border: none;
+    font-size: 16px;
+    color: $white;
+    cursor: pointer;
+    height: 40px;
+    line-height: 38px;
+    outline: none;
+    @extend %form-radius;
+    display: block;
+    transition: background-color 200ms ease-in;
+
+    &:hover {
+      background-color: $green_dark;
+    }
+  }
+}
+
+@media (min-width: 980px) {
+  .form {
+    width: 600px;
+  }
+}

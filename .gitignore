@@ -1,0 +1,25 @@
+# phpstorm project files
+.idea
+
+# temp folder
+temp
+
+# windows thumbnail cache
+Thumbs.db
+
+# Mac DS_Store Files
+.DS_Store
+
+# phpunit itself is not needed
+phpunit.phar
+# local phpunit config
+phpunit.xml
+
+# webroot htaccess (copy from .htaccess.sample)
+web/.htaccess
+
+# node_modules dir, please install with npm install
+node_modules
+
+# sass cache from sass compiler
+.sass-cache

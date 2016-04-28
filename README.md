@@ -13,6 +13,8 @@ instructed on official website
  ```
  $ php composer.phar install
  ```
+4. Point web server to /web directory
+5. Enjoy :)
 
 ## Unit testing
 Run in root directory: phpunit --configuration phpunit.xml
